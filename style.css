@@ -1,0 +1,45 @@
+h1 {
+  text-align: center;
+}
+
+form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#userInp {
+  width: 30%;
+  height: 30px;
+  text-align: center;
+}
+
+#searchInp {
+  display: block;
+  margin: 15px auto;
+  width: 15%;
+  height: 50px;
+  font-size: 20px;
+  background-color: purple;
+  color: white;
+  padding: 5px;
+}
+
+.repos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(211, 125, 138);
+  width: 40%;
+  margin: 0 auto;
+  color: white;
+  border-radius: 5%;
+  /* border: 1px solid gray; */
+}
+
+li {
+  list-style: none;
+  font-size: 30px;
+  margin: 5px;
+  text-shadow: 1px 1px 5px gray;
+}

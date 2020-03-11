@@ -1,21 +1,21 @@
-let input = document.querySelector("input")
-// let user = input.value
-let user = "mileskc"
+let input = document.querySelector("#userInp")
 let repoDiv = document.querySelector(".repos")
 let searchButton = document.querySelector("#searchInp")
 
 const makeCall = async () => {
-  const resp = await axios.get(`https://api.github.com/users/${user}/repos`)
+  event.preventDefault()
+  const resp = await axios.get(`https://api.github.com/users/${input.value}/repos`)
 
-  console.log(resp)
-
-  searchButton.addEventListener("click", ()=> {
-    repoDiv.innerHTML += resp.data[0].name
-  })
+  for (let i = 0; i < resp.data.length-1; i++) {
+    repoDiv.innerHTML += 
+    `<li>${resp.data[i].name}</li>`
+  }
   
 }
 
-makeCall()
+// makeCall()
+
+searchButton.addEventListener("click", makeCall)
 
 // const testCall = async () => {
 //   const resp = await axios.get("https://api.github.com/users/mileskc/repos")
